@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  background-color: #f4f6f8;
+  color: #1a1a2e;
+}
+
+.container {
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+h1 {
+  margin: 0 0 0.25rem;
+  font-size: 1.75rem;
+  color: #16213e;
+}
+
+.subtitle {
+  margin: 0 0 1.5rem;
+  font-size: 0.9rem;
+  color: #5a6270;
+}
+
+.chat-messages {
+  min-height: 400px;
+  max-height: 60vh;
+  overflow-y: auto;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #d8dce3;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.message {
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  line-height: 1.5;
+}
+
+.message.user {
+  background: #e8eef5;
+  border-left: 3px solid #2c5282;
+}
+
+.message.assistant {
+  background: #f0f4f8;
+  border-left: 3px solid #4a5568;
+}
+
+.message-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #5a6270;
+  margin-bottom: 0.25rem;
+}
+
+.message-content {
+  margin: 0;
+}
+
+.message-content > :first-child {
+  margin-top: 0;
+}
+
+.message-content > :last-child {
+  margin-bottom: 0;
+}
+
+.message-content p {
+  margin: 0.5rem 0;
+}
+
+.message-content ul,
+.message-content ol {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.message-content li {
+  margin: 0.25rem 0;
+}
+
+.message-content h1,
+.message-content h2,
+.message-content h3 {
+  margin: 0.75rem 0 0.35rem;
+  font-size: 1rem;
+  color: #16213e;
+}
+
+.message-content code {
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.9em;
+  background: #e2e8f0;
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+}
+
+.message-content pre {
+  margin: 0.5rem 0;
+  padding: 0.75rem;
+  background: #e2e8f0;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.message-content pre code {
+  padding: 0;
+  background: none;
+}
+
+.input-area {
+  display: flex;
+  gap: 0.5rem;
+}
+
+#message-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 1px solid #d8dce3;
+  border-radius: 6px;
+}
+
+#message-input:focus {
+  outline: none;
+  border-color: #2c5282;
+}
+
+#send-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #2c5282;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#send-button:hover {
+  background: #1a365d;
+}
+
+#send-button:disabled {
+  background: #a0aec0;
+  cursor: not-allowed;
+}
