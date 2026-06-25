@@ -19,6 +19,21 @@ use (e.g. web search and a weather tool).
 - Tavily (web search tool)
 - Vanilla HTML/CSS/JavaScript frontend
 
+## Architecture
+
+```mermaid
+flowchart LR
+    U[Upload docs] --> X[Index]
+    X --> VS[(Vector store)]
+    Q[Question] --> RT[Retriever]
+    VS --> RT
+    RT --> LLM[OpenAI LLM]
+    T[Tools: web search] --> LLM
+    LLM --> Res[Response]
+```
+
+**Skills demonstrated:** building a retrieval pipeline behind a FastAPI service, combining RAG with tool use (web search), and wiring a simple frontend to an LLM backend.
+
 ## Setup
 
 **Backend**
